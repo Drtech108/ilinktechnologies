@@ -6,6 +6,12 @@ services:
     startCommand: gunicorn mensah.wsgi:application
     envVars:
       - key: DEBUG
-        value: False
+        value: false
       - key: SECRET_KEY
-        generateValue: true 
+        generateValue: true
+      - key: DJANGO_SETTINGS_MODULE
+        value: mensah.settings
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mensah-db  # <-- Replace with the exact name you give your DB
+          property: connectionString
