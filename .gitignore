@@ -1,15 +1,35 @@
-# Python cache
-__pycache__/
-*.pyc
 
-# Django database
-db.sqlite3
-
-# Virtual environment
+# Ignore virtual environment
 env/
 
-# VS Code settings
-.vscode/
+# Python cache files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
 
-# Static files
-static/
+# Ignore IDE/editor files
+.vscode/
+*.swp
+*.sublime*
+.idea/
+
+# Django static files
+/staticfiles/
+
+# Local environment variables
+.env
+
+# Database and migrations (optional, keep if you don't want to track DB)
+*.sqlite3
+db.sqlite3
+
+# Logs
+*.log
+
+# System-specific files
+.DS_Store
+Thumbs.db
